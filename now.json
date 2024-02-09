@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "App.jsx", // Gantilah sesuai dengan berkas entry point Anda
+        "use": "@now/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "./src/routes/route-hotel.js"
+      }
+    ]
+  }
+  
