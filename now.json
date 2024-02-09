@@ -1,16 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./src/main.jsx", // Gantilah sesuai dengan berkas entry point Anda
-        "use": "@now/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "./src/routes/route-hotel.js"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "/src/main.jsx", // Sesuaikan dengan berkas entry point Anda
+      "use": "@now/node"
+    },
+    {
+      "src": "/src/routes/route-hotel.js", // Sesuaikan dengan berkas server Anda
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/main.jsx"
+    }
+  ],
+  "public": {
+    "ignore": ["**/*.jsx"]
   }
-  
+}
