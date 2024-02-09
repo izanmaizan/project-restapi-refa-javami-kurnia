@@ -1,14 +1,9 @@
-// models/Guest.js
+// Booking.js
 import { DataTypes } from 'sequelize';
 import sequelize from '../src/configs/sequelizeConnection.js';
 
-const Guest = sequelize.define('Guest', {
-  // Define the columns of the guests table
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
+const Guest = sequelize.define('guests', {
+  // definisi kolom-kolom tabel Guests
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -29,6 +24,8 @@ const Guest = sequelize.define('Guest', {
     type: DataTypes.DATE,
     allowNull: false,
   },
+}, {
+  timestamps: false, // tidak ada updatedAt dan createdAt
 });
 
 export default Guest;

@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,41 +13,97 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navigation {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  height: 100px;
+  backdrop-filter: blur(8px) brightness(1.2);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  mask-image: linear-gradient(black 70%, transparent);
+  -webkit-mask-image: linear-gradient(black 70%, transparent);
+}
+
+li {
+  margin-right: 20px;
+}
+
+.navigation > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  margin: 15px !important;
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #646cff;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all 0.5s ease;
+}
+
+.navigation a:hover {
+  background: #8ca6db;
+  color: black;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    height: 80px; /* Ubah sesuai kebutuhan untuk ukuran layar seluler */
+    justify-content: center; /* Ubah untuk penataan konten yang berbeda */
+    margin: 0;
+  }
+
+  .navigation a {
+    font-size: 10px; /* Ukuran font untuk layar seluler */
+  }
+
+  .navigation li {
+    margin-right: 0;
+  }
 }
 
 button {
+  margin-top: 15px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #646cff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ee3;
+  background-color: #8ca6db;
 }
 button:focus,
 button:focus-visible {
@@ -69,4 +121,206 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+.roomList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rwd-table {
+  padding: 1em; 
+  width: 90vw;
+  background: #013648;
+  color: #fff;
+  border-radius: .8em;
+  overflow: hidden;
+  border-collapse: collapse;
+  tr {
+    border-color: lighten(#013648, 10%);
+    transition: background 0.25s ease;
+  }
+  tbody tr:hover {
+  background: #014055;
+  }
+  th, td {
+    margin: .5em 1em;
+  }
+  th, td:before {
+    color: #ffcc00;
+  }
+  th {
+  border-bottom: 1px solid #364043;
+  color: #ffcc00;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+  }
+  .roomHead {
+    border-bottom: 1px solid #364043;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  td {
+    padding:  0.65em 1em;
+  }
+  .roomName {
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  .description {
+    font-style: italic;
+    font-size: 0.85em;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 60vw;
+}
+
+.booking h2 {
+  margin: 15px 0px 0px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 20px;
+}
+
+.ic2 {
+  margin-top: 20px;
+}
+
+.input-fullName,
+.input-email {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-long {
+  width: 100px;
+}
+
+.input-fullName:focus ~ .cut,
+.input-fullName:not(:placeholder-shown) ~ .cut,
+.input-email:focus ~ .cut,
+.input-email:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input-fullName:focus ~ .placeholder,
+.input-fullName:not(:placeholder-shown) ~ .placeholder,
+.input-email:focus ~ .placeholder,
+.input-email:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input-fullName:not(:placeholder-shown) ~ .placeholder,
+.input-email:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input-fullName:focus ~ .placeholder,
+.input-email:focus ~ .placeholder {
+  color: #646cff;
+}
+
+input[type="date"]{
+  width: 20vw;
+  background-color: #646cff;
+  padding: 10px;
+  position: static;
+  font-family: "Roboto Mono",monospace;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator{
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.check {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.room-list {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #ee3;
+  text-align: center;
+  font-size: 18px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 50%;
+}
+
+
+.room-list:hover {
+  cursor: pointer;
 }
