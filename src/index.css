@@ -90,6 +90,7 @@ li {
 }
 
 button {
+  width: 10vw;
   margin-top: 15px;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -108,6 +109,18 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Untuk tombol "Delete" */
+.btnDelete {
+  background-color: #ff4d4d;
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  cursor: pointer;
+}
+
+.btnDelete:hover {
+  background-color: #e63946; 
 }
 
 @media (prefers-color-scheme: light) {
@@ -130,7 +143,7 @@ button:focus-visible {
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 
 .roomList {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +240,11 @@ button:focus-visible {
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
+}
+
+.validasiEmail {
+  font-size: small;
+  margin-top: 0;
 }
 
 .cut {

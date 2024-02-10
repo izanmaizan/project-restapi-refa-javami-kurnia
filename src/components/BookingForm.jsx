@@ -105,7 +105,7 @@ const BookingForm = () => {
         <input className="input-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder=" " />
         <div className="cut cut-long"></div>
         <label className="placeholder">Email Address</label>
-      {!isEmailValid && <p style={{ color: 'red' }}>Please enter a valid email address.</p>}
+      {!isEmailValid && <p className='validasiEmail' style={{ color: 'red' }}>Please enter a valid email address.</p>}
       </div>
       
       <div className="roomList">
