@@ -2,25 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/routes/route-hotel.js",
-        "use": "@vercel/node"
-      },
-      {
         "src": "src/App.jsx",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist/client"
-        }
+        "use": "@vercel/node"
       }
     ],
         "routes": [
           {
-            "src": "/api/(.*)",
-            "dest": "src/routes/route-hotel.js"
-          },
-          {
             "src": "/(.*)",
-            "dest": "src/App.jsx" 
+            "dest": "/"
           }
         ]
   }
