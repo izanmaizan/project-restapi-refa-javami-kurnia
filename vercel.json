@@ -9,26 +9,18 @@
         "src": "src/App.jsx",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "build"
+          "distDir": "dist/client"
         }
       }
     ],
     "routes": [
       {
-        "src": "/rooms/(.*)",
-        "dest": "/src/routes/route-hotel.js"
+        "src": "/api/(.*)",
+        "dest": "src/routes/route-hotel.js"
       },
       {
-        "src": "/booking/(.*)",
-        "dest": "/src/routes/route-hotel.js"
-      },
-      {
-        "src": "/history/(.*)",
-        "dest": "/src/routes/route-hotel.js"
-      },
-      {
-        "src": ".*",
-        "dest": "/src/App.jsx"
+        "src": "/(.*)",
+        "dest": "src/App.jsx"
       }
     ]
   }
