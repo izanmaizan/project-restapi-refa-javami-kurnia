@@ -8,6 +8,7 @@ import sequelize from '../configs/sequelizeConnection.js';
 import Guest from '../../models/Booking.js';
 import Room from '../../models/Rooms.js';
 import bodyParser from 'body-parser';
+import BookingHistory from '../../models/BookingHistory.js';
 
 // Membuat aplikasi Express
 const app = express();
@@ -89,7 +90,7 @@ app.post('/booking_history', async (req, res) => {
       total_cost,
     } = req.body;
 
-    const bookingHistory = await sequelize.models.booking_history.create({
+    const bookingHistory = await BookingHistory.create({
       guest_name,
       guest_email,
       room_name,
