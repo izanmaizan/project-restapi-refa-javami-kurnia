@@ -107,6 +107,24 @@ app.post('/booking_history', async (req, res) => {
   }
 });
 
+// Endpoint untuk menghapus data dari tabel guests
+app.delete('/guests/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const guest = await Guest.findByPk(id);
+
+    if (!guest) {
+      res.status(404).send('Booking not found');
+      return;
+    }
+
+    await guest.destroy();
+    res.status(204).end();
+  } catch (error) {
+    console.error('Error deleting booking:', error);
+    res.status(500).send(error.message);
+  }
+});
 
 
 

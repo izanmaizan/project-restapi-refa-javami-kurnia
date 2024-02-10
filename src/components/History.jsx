@@ -42,6 +42,15 @@ const History = () => {
       .catch((error) => console.error(error));
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/guests/${id}`);
+      fetchBookings(); // Refresh data setelah penghapusan
+    } catch (error) {
+      console.error('Error deleting booking:', error);
+    }
+  };
+
   return (
     <div className='history'>
       <h2>Booking History</h2>
@@ -71,6 +80,7 @@ const History = () => {
                 <button onClick={() => saveToBookingHistory(booking)}>
                   Save to History
                 </button>
+                <button onClick={() => handleDelete(booking.id)}>Delete</button>
               </td>
             </tr>
           ))}
