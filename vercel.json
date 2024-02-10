@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "build": [
+        {
+            "src": "./src/routes/route-hotel.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
