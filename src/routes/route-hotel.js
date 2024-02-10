@@ -8,16 +8,6 @@ import sequelize from '../configs/sequelizeConnection.js';
 import Guest from '../../models/Booking.js';
 import Room from '../../models/Rooms.js';
 import bodyParser from 'body-parser';
-const path = require('path');
-
-
-// Serve React app pada rute root ('/') menggunakan Express.static
-app.use(express.static(path.resolve(__dirname, '../../public')));
-
-// Semua permintaan yang tidak cocok dengan rute API diarahkan ke halaman utama React
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../../public/index.html'));
-});
 
 // Membuat aplikasi Express
 const app = express();
