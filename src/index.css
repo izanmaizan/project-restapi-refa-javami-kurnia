@@ -90,7 +90,6 @@ li {
 }
 
 button {
-  width: 10vw;
   margin-top: 15px;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -111,8 +110,20 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Untuk tombol "Delete" */
+.btnSave {
+  width: 8vw;
+  background-color: #646cff;
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  cursor: pointer;
+}
+
+.btnSave:hover {
+  background-color: #8ca6db; 
+}
+
 .btnDelete {
+  width: 8vw;
   background-color: #ff4d4d;
   padding: 10px 20px; 
   border-radius: 8px; 

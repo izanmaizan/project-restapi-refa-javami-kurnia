@@ -77,7 +77,7 @@ const History = () => {
               <td>Rp.{booking.Room.price}</td>
               <td>Rp.{calculateTotalCost(booking.check_in, booking.check_out, booking.Room.price)}</td>
               <td>
-                <button onClick={() => saveToBookingHistory(booking)}>Save</button>
+                <button className='btnSave' onClick={() => saveToBookingHistory(booking)}>Save</button>
                 <button className='btnDelete' onClick={() => handleDelete(booking.id)}>Delete</button>
               </td>
             </tr>
