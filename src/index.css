@@ -407,3 +407,68 @@ input[type="date"]{
     transform: translate(-50%, -50%);
   }
 }
+
+
+/* Di dalam file index.css atau file CSS terpisah */
+
+.history {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rwd-table-history {
+  padding: 1em; 
+  width: 90vw;
+  background: #013648;
+  color: #fff;
+  border-radius: .8em;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.rwd-table-history tr {
+  border-color: lighten(#013648, 10%);
+  transition: background 0.25s ease;
+}
+
+.rwd-table-history tbody tr:hover {
+  background: #014055;
+}
+
+.rwd-table-history th, .rwd-table-history td {
+  margin: .5em 1em;
+}
+
+.rwd-table-history th, .rwd-table-history td:before {
+  color: #ffcc00;
+}
+
+.rwd-table-history th {
+  border-bottom: 1px solid #364043;
+  color: #ffcc00;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+.rwd-table-history .roomHead {
+  border-bottom: 1px solid #364043;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.rwd-table-history td {
+  padding:  0.65em 1em;
+}
+
+.rwd-table-history .roomName {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.rwd-table-history .description {
+  font-style: italic;
+  font-size: 0.85em;
+}

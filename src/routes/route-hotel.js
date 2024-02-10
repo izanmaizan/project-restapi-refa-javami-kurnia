@@ -61,6 +61,51 @@ app.post('/booking', async (req, res) => {
   }
 });
 
+// Endpoint untuk mendapatkan data guests menggunakan sequelize
+app.get('/guests', async (req, res) => {
+  try {
+    // Menggunakan Sequelize untuk mendapatkan data guests
+    const guests = await Guest.findAll({
+      include: [{ model: Room, attributes: ['room_name', 'price'] }],
+    });
+    res.json(guests);
+  } catch (error) {
+    console.error(error); // Cetak kesalahan di konsol
+    res.status(500).send(error.message);
+  }
+});
+
+
+// Endpoint untuk menyimpan data ke tabel booking_history
+app.post('/booking_history', async (req, res) => {
+  try {
+    const {
+      guest_name,
+      guest_email,
+      room_name,
+      check_in,
+      check_out,
+      price_per_night,
+      total_cost,
+    } = req.body;
+
+    const bookingHistory = await sequelize.models.booking_history.create({
+      guest_name,
+      guest_email,
+      room_name,
+      check_in,
+      check_out,
+      price_per_night,
+      total_cost,
+    });
+
+    res.status(201).json(bookingHistory);
+  } catch (error) {
+    console.error('Error saving to booking_history:', error);
+    res.status(500).send(error.message);
+  }
+});
+
 
 
 
