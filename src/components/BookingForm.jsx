@@ -126,7 +126,7 @@ const BookingForm = () => {
         {Array.isArray(rooms) && rooms.length > 0 ? (
           rooms.map((room) => (
             <div key={room.room_id} onClick={() => handleRoomSelect(room)}>
-              {room.room_name}
+              <p>{room.room_name}</p>
             </div>
           ))
         ) : (

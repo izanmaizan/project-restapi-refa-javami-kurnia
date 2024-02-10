@@ -338,8 +338,10 @@ input[type="date"]{
 }
 
 .modal-content {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
-  width: 30vw;
+  width: 50vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -351,15 +353,40 @@ input[type="date"]{
   animation: fadeInModal 0.3s ease-in-out;
 }
 
+.modal-content h2 {
+  width: 100%;
+}
+
+.modal-content div {
+  flex: 1 0 20%; /* Membuat elemen memenuhi 20% dari lebar container, dan memulai baris baru setiap 5 elemen */
+  margin: 5px; /* Margin antar elemen */
+  padding: 5px;
+}
+
+.modal-content div:hover {
+  background-color: #65657B; /* Ubah warna latar belakang saat dihover sesuai keinginan */
+  color: #fff; /* Ubah warna teks saat dihover sesuai keinginan */
+  border-radius: 5px; /* Efek rounded corners */
+  cursor: pointer;
+}
+
 .close {
   text-align: center;
+  width: 30px;
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 20px;
-  cursor: pointer;
   color: #fff; 
 }
+
+.close:hover {
+  background-color: #65657B; /* Ubah warna latar belakang saat dihover sesuai keinginan */
+  color: #fff; /* Ubah warna teks saat dihover sesuai keinginan */
+  border-radius: 50%; /* Efek rounded corners untuk membuatnya bulatan kecil */
+  cursor: pointer; /* Mengubah cursor saat dihover menjadi tanda pointer */
+}
+
 /* Optional: Animation for modal appearance */
 @keyframes fadeInOverlay {
   from {
