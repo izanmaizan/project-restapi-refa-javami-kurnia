@@ -1,6 +1,6 @@
 # Project CRUD REST API 
 ## Studi Kasus Hotel Purnadika: RoomList, BookingForm. History
-### visit to view demo: https://project-restapi-refa-javami.vercel.app/
+### visit to view demo without database: https://project-restapi-refa-javami.vercel.app/
 
 
 React + Vite(Front End Tools)
