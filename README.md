@@ -1,5 +1,9 @@
-# React + Vite
+# Project CRUD REST API 
+## Studi Kasus Hotel Purnadika: RoomList, BookingForm. History
+### visit to view demo: https://project-restapi-refa-javami.vercel.app/
 
+
+React + Vite(Front End Tools)
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
