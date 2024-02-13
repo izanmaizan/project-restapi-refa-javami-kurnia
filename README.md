@@ -1,5 +1,5 @@
 # Project CRUD REST API 
-## Studi Kasus Hotel Purnadika: RoomList, BookingForm. History
+## Studi Kasus Hotel Purnadika: RoomList, BookingForm, and History
 ### visit to view demo without database: https://project-restapi-refa-javami.vercel.app/
 
 
