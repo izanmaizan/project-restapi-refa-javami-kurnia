@@ -11,6 +11,9 @@ import History from './components/History.jsx';
 const Navigation = () => {
   return (
     <nav className='navigation'>
+      <span className='credit'>
+      &copy; Maizan Insani Akbar
+      </span>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/booking">Booking</Link></li>
